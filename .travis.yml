@@ -5,4 +5,4 @@ before_install:
   - docker build -t cloud4saurav/docker-react -f Dockerfile.dev . 
 
 script:
-  - docker run cloud4saurav/docker-react npm run test -- --coverage
+  - docker run -e CI=true cloud4saurav/docker-react npm run test
